@@ -1,79 +1,81 @@
 ---
 title: "Temperature Performance Metrics"
-description: "Description of your new file."
+description: "Understand how your shipments are performing against temperature requirements"
 ---
+
+# Temperature Performance Metrics
 
 Use the **Temperature Performance** component to quickly assess how your shipments are adhering to the required temperature range. These metrics also help you pinpoint where excursions might be occurring.
 
-![](/n29.png)
+![Temperature Performance Dashboard](/n29.png)
 
-### Metrics & Descriptions:
+## Metrics & Descriptions
 
-**Shipments with Temp. Data**
+### Shipments with Temp. Data
 
 Total shipments (within your chosen *Date Range* and *Product*) that have at least one temperature-reading device.
 
-A small “Open in new tab” icon may appear, allowing you to navigate directly to a filtered view of those shipments.
+A small "Open in new tab" icon may appear, allowing you to navigate directly to a filtered view of those shipments.
 
-**Shipping Temperature Ranges**
+### Shipping Temperature Ranges
 
 Displays the designated temperature range (e.g., *2°C – 8°C*) for the *selected product*.
 
-If no product is selected, you’ll see a “Select a product” placeholder (since multiple products may have different ranges).
+If no product is selected, you'll see a "Select a product" placeholder (since multiple products may have different ranges).
 
-**Avg. Time out of Range per Shipment**
+### Avg. Time out of Range per Shipment
 
 Shows how long (on average) shipments spent outside the specified temperature range.
 
-If the average time out of range increases from one period to another, it appears in red; if it stays the same or decreases, it’s shown in gray or green accordingly.
+If the average time out of range increases from one period to another, it appears in red; if it stays the same or decreases, it's shown in gray or green accordingly.
 
-**Shipment Count with Excursions**
+### Shipment Count with Excursions
 
 Total number of shipments that experienced at least one temperature excursion.
 
 Clicking the arrow icon navigates you to a filtered shipments list showing only those with excursions.
 
-**Avg. Excursion Temp. Above Range**
+### Avg. Excursion Temp. Above Range
 
-The average temperature recorded for pings exceeding the product’s upper limit.
+The average temperature recorded for pings exceeding the product's upper limit.
 
 Red if it has increased compared to the previous period; gray if unchanged or improved.
 
-**Avg. Excursion Temp. Below Range**
+### Avg. Excursion Temp. Below Range
 
-The average temperature for pings falling below the product’s lower limit.
+The average temperature for pings falling below the product's lower limit.
 
 Red if it has *decreased* from the previous period (because a bigger negative number means a more severe drop), gray otherwise.
 
-### When No Product is Selected:
+## When No Product is Selected
 
 **Shipping Temperature Ranges**, **Avg. Excursion Temp. Above Range**, and **Avg. Excursion Temp. Below Range** are not displayed, as the system cannot determine the applicable temperature thresholds for multiple products.
 
-### Comparison Badges & Tooltips
+## Comparison Badges & Tooltips
 
-**Comparison Badge**: Next to each metric, a small badge (e.g., *+1*, *-3*) indicates how that metric changed relative to a previous time period. The badge’s color reflects whether it’s an unfavorable increase (red), a favorable decrease (green), or neutral (gray).
+**Comparison Badge**: Next to each metric, a small badge (e.g., *+1*, *-3*) indicates how that metric changed relative to a previous time period. The badge's color reflects whether it's an unfavorable increase (red), a favorable decrease (green), or neutral (gray).
 
 **Hover Tooltips**: Provide detailed info on which date ranges are being compared.
 
-### Route & Segment/Waypoint-Level Changes
+## Route & Segment/Waypoint-Level Changes
 
 At **Route level**, these metrics are calculated only for shipments passing through that route.
 
 At **Segment/Waypoint level**, results focus on shipments specifically traveling through that segment/waypoint.
 
-## Shipments Temperature Profile Graph
+# Shipments Temperature Profile Graph
 
-The **Shipments Temperature Profile** graph visualizes each shipment’s recorded temperature over time, enabling you to spot excursions at a glance. By default, this chart uses a *boxplot* approach to show median, quartiles, whiskers, and excursion points.
+The **Shipments Temperature Profile** graph visualizes each shipment's recorded temperature over time, enabling you to spot excursions at a glance. By default, this chart uses a *boxplot* approach to show median, quartiles, whiskers, and excursion points.
 
-![](/n30.png)
+![Shipments Temperature Profile Graph](/n30.png)
 
-![](/n31.png)
+![Shipments Temperature Profile Detail](/n31.png)
 
-### Chart Elements:
+## Chart Elements
 
 **Lower Limit & Upper Limit:** Two horizontal lines (blue for lower, red for upper) indicating the acceptable temperature range for the *selected product*.
 
-### Detailed Shipment Information Panel:
+## Detailed Shipment Information Panel
 
 When you click on a shipment in the standard view (non-expanded):
 
@@ -87,7 +89,7 @@ When you click on a shipment in the standard view (non-expanded):
 
 **Number of Excursions:** Total count of out-of-range events.
 
-**Upper/Lower Limit:** Your product’s defined temperature boundary.
+**Upper/Lower Limit:** Your product's defined temperature boundary.
 
 **Time Above/Below Limit:** How long the shipment spent above/below the thresholds, with a warning icon if >0.
 
@@ -95,37 +97,37 @@ When you click on a shipment in the standard view (non-expanded):
 
 **Review Shipment**: Takes you to a detailed shipment screen (the *Shipments* tab) pre-filtered for this ID.
 
-### Route & Segment Views:
+## Route & Segment Views
 
 At **Route level**, the chart and boxplots reflect shipments for that route.
 
 At **Segment/Waypoint level**, it only includes the temperature data for the portion of travel through that segment/waypoint.
 
-### Comparison Mode (Segments/Waypoints)
+## Comparison Mode (Segments/Waypoints)
 
 When comparing multiple segments or waypoints:
 
-![](/n32.png)
+![Comparison Mode - Multiple Segments](/n32.png)
 
-![](/n33.png)
+![Comparison Mode - Temperature Detail](/n33.png)
 
-The chart label becomes **“Avg. Temperature Profile”** and each line represents the average temperature for a particular segment/waypoint. Hovering on the graph displays the temperature for each line at a specific date.
+The chart label becomes **"Avg. Temperature Profile"** and each line represents the average temperature for a particular segment/waypoint. Hovering on the graph displays the temperature for each line at a specific date.
 
-## Segment/Waypoint Comparison Table:
+# Segment/Waypoint Comparison Table
 
 This table allows you to compare performance metrics—like delays or excursions—across different segments or waypoints, even if they belong to different lanes or routes.
 
-![](/n34.png)
+![Segment/Waypoint Comparison Table](/n34.png)
 
-### Selecting Segments/Waypoints
+## Selecting Segments/Waypoints
 
 **Select Checkbox:** Each row represents a segment/waypoint from a particular lane or route.
 
 The first row (your current segment/waypoint) is always preselected; you can add up to four more rows for comparison.
 
-### Table Columns
+## Table Columns
 
-**Lane Name:** Displays the lane label along with a color-coded icon matching the route’s color scheme in the UI.
+**Lane Name:** Displays the lane label along with a color-coded icon matching the route's color scheme in the UI.
 
 **Route Name:** Shows the route path. Helpful for distinguishing multiple routes within the same lane.
 
@@ -145,13 +147,13 @@ Comparison badge: **red** if increased, **green** if decreased, **gray** if unch
 
 **Avg. Time Out of Range:** The average duration shipments spent outside the temperature range. Comparison badge: **red** if increased, **green** if decreased, **gray** if unchanged.
 
-### Sorting & Organization:
+## Sorting & Organization
 
 **Default Sorting:** Rows are grouped by Lane Name in ascending order, then by Route Name (ASC).
 
 **Checkbox Selections:** The currently viewed segment/waypoint is automatically selected. Additional rows can be checked to enable the multi-line comparison chart.
 
-### Compare Mode Integration:
+## Compare Mode Integration
 
 If you select multiple segments or waypoints, the relevant performance charts (e.g., *Segment Transit Time Trend* or *Avg. Temperature Profile*) update to show lines for each selected row.
 
