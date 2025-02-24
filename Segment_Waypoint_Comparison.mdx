@@ -1,0 +1,86 @@
+---
+title: "Segment/Waypoint Comparison Table"
+description: "Description of your new file."
+---
+
+When analyzing device performance at the **Segment/Waypoint** level, the **Comparison Table** helps you compare multiple segments either within the same route or across different routes and see how they differ in shipment counts, ping rates, battery usage, etc.
+
+### Selecting Segments/Waypoints
+
+Each row in the table represents one segment/waypoint from a particular lane/route. By default, the top row is your *currently viewed* segment/waypoint. You can add up to four more (for a total of 5).
+
+### Columns in the Comparison Table
+
+**Lane Name:** E.g., *Los Angeles to Chicago*, *Frankfurt to Louisville*. Includes a color-coded icon matching each lane’s theme in other parts of *Contxt*.
+
+**Route Name:** E.g., *Los Angeles–Port of Oakland–…*, *Frankfurt–Port of Rotterdam–…*.Distinguishes multiple routes within the same lane.
+
+**Shipment Count:** How many shipments passed through this segment/waypoint. A small, always-gray badge might appear if it changed compared to a prior period.
+
+**Avg. Ping Rate** (minutes): Shows the segment-level average ping rate for all shipments traveling that segment (within your date/product filters). A red or green badge indicates whether it has increased or decreased since the last period.
+
+**Average % at Start:** The average battery percentage at the start of the segment. If it’s gone up, the badge is green; if it’s dropped, the badge is red.
+
+**Average % at End:** The average battery percentage at the end of the segment. Badge color uses the same logic (green for improvement, red for decline).
+
+**Average Duration:** The average transit/dwell time for shipments in that segment. If it’s shorter than before, the badge is green; if longer, it’s red.
+
+## Performance Factor Tab Bar - CO2:
+
+![](/n48.png)
+
+When you select **CO₂ Emissions** from the Performance Factor Tabs, *Contxt* displays the relevant analytics for carbon footprint. As with other tabs:
+
+**CO₂ Emissions** appear with a numerical subtitle (e.g., *0.153 metric tons*) representing total emissions for the currently filtered shipments.
+
+A **red triangle** warning icon displays if there is an alert associated with the CO₂ data (e.g., unusually high emissions), although it’s less common to show a warning for CO₂ than for other risk factors.
+
+## Segment/Waypoint Selector
+
+![](/n49.png)
+
+When viewing **CO₂ Emissions** at the **Route** level, the Segment/Waypoint Selector appears as usual, but with CO2 specific metrics:
+
+**Segment/Waypoint Name:** Example: *“Frankfurt to Port of Rotterdam.*
+
+**Performance Data:**
+
+**Shipment Count**: How many shipments used that segment within the chosen Date Range and Product. Shown in **blue** if it has changed from the previous period, or **gray** if no change is detected.
+
+**CO₂ Emissions**: The total CO₂ emission for shipments along that segment. Displayed in metric tons (e.g., *23.345 mt*). **Red** if it has increased from the previous period, **green** if it has decreased, and **gray** if unchanged.
+
+## CO₂ Chart:
+
+![](/n50.png)
+
+This **CO₂ Chart** appears in the lower part of the screen when **CO₂ Emissions** is selected. It’s a **bar chart + line chart** with dual Y-axes:
+
+**Left Y-Axis: CO₂ Emissions (metric tons): Bars** show the total CO₂ for each time bucket (weekly, monthly, quarterly, or yearly), based on your date range and product filters.
+
+**Right Y-Axis: Shipment Count: A line** indicates how many shipments contributed to emissions for each time bucket.
+
+**X-Axis Bucketing:** Automatically scales based on the number of shipments and the selected date range. **Weekly** buckets if the date range is short. **Monthly** or **Quarterly** if the date range is larger.
+
+### Route & Segment Behavior:
+
+**Route Level**: Only the shipments on the selected route are shown.
+
+**Segment/Waypoint Level**: Only shipments that used that segment or waypoint.
+
+## CO₂ Segment Comparison Table
+
+![](/n51.png)
+
+### Table Columns:
+
+**Lane Name:** Uses a distinct color-coded icon matching that lane’s theme in other UI elements. E.g., *Los Angeles to Chicago*, *Frankfurt to Louisville.*
+
+**Route Name:** Clarifies exactly which route is being compared. E.g., *Los Angeles–Port of Oakland–…*, *Frankfurt–Port of Rotterdam.*
+
+**Shipment Count:** Number of shipments traveling that segment for your chosen Date Range and Product. A small, always-gray badge might appear if compared to a previous time period, though its color remains gray even if there is a positive or negative delta from the previous time period.
+
+**CO₂ Emissions:** Displayed in metric tons (e.g., *15.2 mt*). A red, green, or gray badge indicates if emissions went up, down, or stayed the same compared to the previous period.
+
+**Avg. Duration:** The average dwell or transit time (in minutes) for shipments across that segment.
+
+A red, green, or gray badge similarly indicates the direction of change.
