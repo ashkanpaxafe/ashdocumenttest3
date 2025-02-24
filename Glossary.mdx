@@ -1,0 +1,114 @@
+---
+title: "Glossary"
+description: "Key terms and definitions used throughout the Contxt platform."
+---
+
+# Glossary
+
+## Lane Terminology
+
+**Origin**  
+The starting point of a lane or route. Where the products are picked up or the journey officially begins.
+
+**Destination**  
+The endpoint of a lane, where the shipment arrives and completes its journey.
+
+**Lane**  
+A point-to-point shipping corridor from an Origin to a Destination, possibly involving multiple modes, routes, or products.
+
+**Lane ID**  
+A unique identifier (if provided by the customer) displayed in Contxt's lane metrics panel. This helps users correlate the lane with external systems or references.
+
+**Lane Risk Assessment**  
+The central page shows the list of lanes, each lane's performance, and external impact.
+
+**Lane Performance**  
+A Performance factor tab summarizing on-time metrics or temperature compliance across all shipments in a lane. Also includes a color-coded performance status: Needs Attention (1 dot), Average (2 dots), Optimal (3 dots).
+
+## Route Components
+
+**Segment**  
+Within a route, a segment is the portion between consecutive waypoints (e.g., Frankfurt → Port of Rotterdam). Often used interchangeably with "leg."
+
+**Waypoint**  
+A location (airport, port, distribution center, etc.) that shipments pass through. Connected by segments to form a route. Waypoint-level performance might show dwell times (stops), device events, or temperature data.
+
+**Route**  
+A complete path from origin to destination (including any waypoints or segments). A single lane can contain multiple routes, each with variations in mode or stops.
+
+**Route ID**  
+A unique numeric (or alphanumeric) reference for a route.
+
+**Route Verification Status**  
+A small icon next to a route name indicates if it's Verified (solid blue check), Pending Verification (hollow circle), or Unverified (gray x).
+
+**Low Confidence Route**  
+A route flagged by Contxt as having too few shipments or insufficient data.
+
+## Shipment Details
+
+**Shipment**  
+An individual movement of goods from origin to destination, containing attributes like start date/time, transit time, temperature readings, and device logs. Found in the Shipments tab or by drilling into route/segment details.
+
+**Shipment ID**  
+A unique identifier for each shipment (e.g., PX114550). Clicking this in the Shipments tab shows detailed performance data.
+
+**Delayed Shipment**  
+Any shipment whose actual transit time exceeds the expected transit time for its lane or route.
+
+**On-Time Delivery**  
+Shipments that meet or beat the Expected Transit Time. Part of the "Delivery Performance" metrics in the platform.
+
+**Unresolved Shipments**  
+Shipments omitted from standard performance calculations because of missing or invalid data (e.g., no location, no temperature). Users can click "Review Shipments" to investigate or fix data issues.
+
+## Performance Metrics
+
+**Device Performance**  
+A Performance Factor Tab focusing on battery and ping rate metrics. Helps users see whether devices are consistently updating location data and whether battery thresholds are met.
+
+**Ping Rate**  
+How often a device "pings" its location. Typically expressed in minutes. If a ping rate is significantly above the expected threshold (e.g., >25%), the route or shipment may flag "Needs Attention."
+
+**Expected Ping Rate**  
+A baseline interval (e.g., 60 minutes) at which the tracking device is meant to report location. Deviations above 10%, 25%, etc. may be flagged as Average or Needs Attention.
+
+**Expected Transit Time**  
+The contractual or scheduled duration for a lane or route. Used to classify shipments as On-Time or Delayed.
+
+**Temperature Performance**  
+A Performance factor tab and set of metrics concerning temp excursions (above or below a product's thresholds).
+
+**Excursion**  
+An event where the temperature goes above or below the acceptable range for a product. Counted at the shipment, route, or segment level, as well as aggregated across an entire lane.
+
+## External Factors & Transportation
+
+**External Events (Impact)**  
+Weather-, geopolitical-, or other disruptions that may affect shipments. Contxt calls these High, Medium, Low, or No Events. Displayed in the external impact tab.
+
+**Mode of Transportation**  
+The travel method (Air, Ocean, Road, or Multimode if multiple methods exist). Appears in tags or labels within lane/route details.
+
+**Multimode**  
+A tag indicating that more than one mode (e.g., road + air) is used along a lane or route.
+
+## Platform Features
+
+**Packaging Performance**  
+A performance factor tab indicates a feature that assesses the performance of the packaging during the shipment.
+
+**Comparison Mode**  
+An optional view for Segments/Waypoints (or sometimes shipments) that places multiple items side by side in a table or multi-line chart. It is often used to compare performance metrics across up to five segments/waypoints.
+
+**Athena Insights**  
+AI-powered summaries that offer data-driven recommendations and highlight areas such as on-time delivery, temperature performance, device performance, packaging status, or external impacts (events).
+
+**Advanced Filters**  
+A more detailed filtering mechanism (e.g., in Shipments or External Events) that allows sorting and filtering by multiple attributes such as route type (high confidence, low confidence) and other advanced search parameters.
+
+**Last Data Refresh**  
+A timestamp (e.g., 2024-08-06 at 12:45 PM UTC) is shown in many page headers or components to confirm when Contxt last updated its data. All metrics, charts, or external events reflect that point in time.
+
+**Account Activation**  
+The process by which a new user sets their Contxt password after being invited by their organization's administrator. Involves receiving an automated email, clicking Activate, and creating credentials.

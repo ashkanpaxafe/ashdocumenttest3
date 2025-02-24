@@ -1,0 +1,117 @@
+---
+title: "External Impact Map and Table"
+description: "Description of your new file."
+---
+
+This combined component offers both an **Interactive Map** and an **External Events Table** to help you visualize and filter external disruptions:
+
+## Filters
+
+Filter external events by route, waypoints/segments, event type, and severity:
+
+- **Route Filter:** Multi-select dropdown for one or more routes. When you arrive from a specific route, that route is preselected.
+
+- **Waypoints/Segments Filter:** Multi-select list that focuses the map and event list on disruptions at selected locations.
+
+- **Event Type:** Multi-select categories like *Weather* and *Geopolitical*.
+
+- **Event Severity:** Multi-select options for *High*, *Medium*, and *Low*.
+
+> **Note**: The usual **Date Range** and **Product** filters are *disabled* in External Events mode. All external disruptions are linked to real-time or recent data.
+
+## Map View & Interactions
+
+The interactive map displays event locations with severity-coded icons:
+
+- *Red* icons for *High* severity
+- *Yellow* icons for *Medium* severity
+- *Green* icons for *Low* severity
+
+You can zoom, pan, and click on icons for details. Selecting map elements highlights corresponding rows in the table below.
+
+## External Events Table
+
+Below the map, a summary table groups events by type with severity counts:
+
+| Event Type | High | Medium | Low |
+|------------|------|--------|-----|
+| Weather    | 3    | 5      | 12  |
+| Geopolitical | 1  | 2      | 4   |
+
+Clicking any cell (e.g., *Weather High*) filters to show only those specific events.
+
+## External Events Feed
+
+The feed displays individual event entries in descending order of severity.
+
+![External Events Feed](/n38.png)
+
+### Event Row Details
+
+Each row contains:
+
+- **Severity:** *High* (red), *Medium* (yellow), or *Low* (green)
+- **Event Type:** Icon and label (e.g., globe for *Geopolitical*, cloud for *Weather*)
+- **Start Date & Time:** Event beginning (UTC)
+- **Description:** Brief impact summary
+- **Disruptions:** (For geopolitical events) Specific impacts like airport closures
+- **Details Button:** Opens comprehensive event data
+
+### Sorting & Pagination
+
+Events are sorted by severity (high to low) then by date (newest first). Pagination controls let you navigate between pages and adjust items per page.
+
+> If no events match your filters, a message reads *"No External Events Found."*
+
+## Event Details
+
+When viewing a specific event, a modal appears with comprehensive information.
+
+![Event Heading](/n39.png)
+
+### Event Header
+
+The header includes:
+
+- **Event Type & Name:** (e.g., "Weather Event Details: Storm")
+- **Severity Level:** High, Medium, or Low with color coding
+- **Last Data Refresh:** Timestamp of latest update
+- **Close Button:** Returns to previous screen
+
+### Event Description
+
+![Event Description](/n40.png)
+
+The description section provides:
+
+- **Event Headline:** Bold statement from the data source
+- **Event Summary:** Expandable description with Read More/Less toggle
+- **Overview Grid:**
+  - Start Date
+  - End Date (or "Ongoing")
+  - Data Source
+  - Location
+
+## Weather-Specific Visualizations
+
+### Severity Dynamics Chart
+
+For weather events, a bar chart shows how severity evolves over time:
+
+![Severity Chart](/n41.png)
+
+The chart displays daily severity levels (Low/Medium/High) throughout the event duration, with the current day positioned at the left.
+
+### Five-Day Forecast
+
+![Weather Forecast](/n42.png)
+
+A detailed forecast table shows:
+
+| Date | Temperature | Wind Speed | Precipitation |
+|------|-------------|------------|---------------|
+| 11 May | H 3°C, L -9°C | 210 km/h | Rain (3h) |
+| 12 May | H 5°C, L -7°C | 180 km/h | Snow (1h) |
+| etc. | | | |
+
+Each day appears in its own column for easy comparison of changing conditions.

@@ -1,0 +1,147 @@
+---
+title: "Lane/Route/Shipment Tab Heading"
+description: "Header component for lane, route, and shipment detail views"
+---
+
+# Lane/Route/Shipment Tab Heading
+
+The header component appears at the top of lane, route, and shipment detail pages, providing essential context information and navigation controls.
+
+![Lane/Route/Shipment Header](/n13.png)
+
+## Component Overview
+
+This header serves as the primary navigation and context area when users drill down into specific lanes, routes, or shipments from the Lane Risk Assessment page. It provides location awareness, filtering capabilities, and quick access to key actions.
+
+## Component Structure
+
+### Navigation Elements
+
+| Element | Description | Behavior |
+|---------|-------------|----------|
+| Breadcrumbs | Shows current navigation path (e.g., *Lane Risk Assessment > Lane: Frankfurt to Louisville*) | Clickable links to navigate up the hierarchy |
+| Back Button | Arrow icon with "Back" label | Returns to previous lane list view while preserving applied filters |
+
+### Context Information
+
+| Element | Description | Behavior |
+|---------|-------------|----------|
+| Lane Name | Origin-to-destination label | Static display |
+| Athena Summary | AI-powered insights button | Opens modal with AI analysis of current selection |
+| Last Data Refresh | Timestamp of most recent data update | Static display with UTC timezone |
+| Transportation Mode | Tags showing mode(s) used | Static display |
+| Lane SOP Status | Verification status indicator | Hover shows tooltip with additional information |
+| Lane Performance | Current performance level | Visual indicator (color-coded) |
+| External Events Impact | Severity of disruptions | Visual indicator (color-coded) |
+
+### Actions
+
+| Element | Description | Behavior |
+|---------|-------------|----------|
+| Download CSV | Export raw data | Downloads ping-level data for current selection |
+| Date Range Filter | Time period selector | Updates all metrics and charts on page |
+| Product Filter | Single-select dropdown | Updates all metrics and charts on page |
+| Navigation Tabs | Lane Overview, Routes, Shipments | Changes main content area |
+| Notification Icon | System alerts | Opens notification panel |
+| Profile Icon | User menu | Opens dropdown with account options |
+
+## Detailed Specifications
+
+### Breadcrumbs
+- Shows hierarchical path to current view
+- Last item represents current selection
+- Note: When viewing route or segment details, breadcrumb still shows lane name
+
+### Back Button
+- Returns to previous lane list view
+- Preserves any applied filters (date range, product)
+- Includes left arrow icon for visual clarity
+
+### Lane Name & Athena Summary
+- Lane name displays origin-to-destination format
+- Athena button opens AI-powered analysis modal
+- If viewing a route/segment, Athena pre-selects corresponding route
+
+### Last Data Refresh
+- Format: "Last data refresh: YYYY-MM-DD at HH:MM AM/PM UTC"
+- All metrics reflect data as of this timestamp
+
+### Transportation Mode & Lane SOP Status
+- Mode tags: Road, Air, Marine, or Multimode
+- SOP Status:
+  - Verified: Solid blue checkmark
+  - Not Provided: Disabled checkmark
+  - Hover tooltips provide additional context
+
+### Lane Performance & External Events Impact
+- Performance levels: Needs Attention, Average, Optimal
+- Impact levels: High (red), Medium (yellow), Low (green)
+
+### Download CSV
+- Exports all ping-level data for current selection
+- Filtered by current date range and product selection
+- Includes columns: ShipmentID, LaneID, RouteID, LegID, ProductID, DeviceID, Latitude, Longitude, Temperature, BatteryPercentage, PingRate, Temperature Excursion, Status, BestDevice
+
+### Filters
+- Date Range options:
+  - Predefined: Last Data Refresh, Last Month, Last 2 Months, Last 3 Months, Last 6 Months, This Year, Last Year
+  - Custom: Dual-month calendar picker with Apply/Cancel buttons
+  - Unavailable dates are disabled/greyed out
+- Product Filter:
+  - Single-select dropdown
+  - Default: "Select Product" (includes all shipments)
+  - Note: Temperature metrics require specific product selection
+
+### Navigation Tabs
+- Lane Overview: Summary stats and insights
+- Routes: List of routes with count indicator
+- Shipments: Individual shipments with count indicator
+
+### User Menu Options
+- My Profile
+- Contact Support
+- Terms of Use
+- Privacy Notice
+- Log Out
+
+## Performance Factor Tabs
+
+![Performance Factor Tabs](/n14.png)
+
+Located below the main header, these tabs present key performance metrics for the current selection.
+
+| Tab | Description | States |
+|-----|-------------|--------|
+| Lane Performance | Overall performance level | Needs Attention, Average, Optimal |
+| External Impact | Severity of disruptions | High, Medium, Low, No Events |
+| Device Performance | IoT device reliability | Optimal, Average, Needs Attention |
+| CO2 Emissions | Total emissions | Numeric value (metric tons or kilotons) |
+| Packaging Performance | Material efficiency | Coming Soon (disabled) |
+
+### Lane Performance
+- **Needs Attention**: Any shipment delayed or with temperature excursion
+- **Average**: At least one shipment with readings within 10% of temperature threshold
+- **Optimal**: No shipments triggering other conditions
+- Red warning triangle appears for "Needs Attention" state
+
+### External Impact
+- **High**: Serious disruptions detected (e.g., severe weather)
+- **Medium**: Moderate disruptions present
+- **Low**: Only minor disruptions present
+- **No Events**: No disruptions reported
+- Red warning triangle appears for "High" state
+
+### Device Performance
+- **Needs Attention**: >25% ping rate deviation or battery levels below thresholds
+- **Average**: Ping rates deviate by >10% but <25%
+- **Optimal**: No shipments meeting other criteria
+- Red warning triangle appears for "Needs Attention" state
+
+### CO2 Emissions
+- Displays total emissions value
+- No warning triangle (informational only)
+- Color-coded to highlight aggregated emissions
+
+### Packaging Performance
+- Currently disabled/greyed out
+- Labeled as "Coming Soon"

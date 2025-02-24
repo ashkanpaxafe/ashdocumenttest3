@@ -1,0 +1,41 @@
+---
+title: "Lane/Route/Shipment Tab Heading (External Impact View)"
+description: "Understanding the External Impact view interface elements"
+---
+
+# External Impact View
+
+When viewing the **External Impact** tab, the interface adapts to focus on external events rather than performance metrics.
+
+## Header Information
+
+![External Impact Header](/n35.png)
+
+The header area displays key information with the following modifications:
+
+- **Date Range Filter**: Automatically set to *Last Data Refresh* and remains non-editable in External Events mode
+- **Product Filter**: Shows "Select Product" but remains disabled as external events are not product-specific
+- **External Impact Status**: Displays "No Events" when no relevant external events exist for the current selection
+
+> **Note**: When switching back to *Lane Performance* or *Device Performance*, your previously selected date range and product filters are preserved.
+
+## Segment/Waypoint Selector
+
+When exploring external events at the **Route** level, the interactive timeline maintains its presence but with modified functionality:
+
+![Segment/Waypoint Selector in External Events View](/n36.png)
+
+| Element | Behavior in External Impact View |
+|---------|----------------------------------|
+| Metric Display | Shows only *External Event Impact* levels (High, Medium, Low, or No Events) |
+| Selection | Clicking a segment/waypoint filters the map and event table to show only relevant external events |
+| Comparison | "Compare to Other Routes" functionality is disabled in this view |
+| Empty State | Segments with no associated events display "No Events" |
+
+## Performance Factor Tab Bar
+
+![Performance Tab Bar](/n37.png)
+
+The tab navigation remains consistent with other views, with **External Impact** highlighted when active. 
+
+If no external impact data is available, the tab will still be visible but will display "No Events" with a grayed-out indicator.

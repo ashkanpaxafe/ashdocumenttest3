@@ -1,0 +1,93 @@
+---
+title: "Device Performance Overview"
+description: "Description of your new file."
+---
+
+In *Contxt*, the **Device Performance** tab appears in the Performance Factor Tabs. When you click **Device Performance**, the system displays two key metrics:
+
+- **Ping Rate Insights**
+- **Battery Insights**
+
+These metrics update dynamically based on your **Date Range** and **Product** filters. You can view these insights at the Lane, Route, or Segment/Waypoint level:
+
+- **Lane Level**: Shows aggregated data for all shipments traversing the entire lane.
+- **Route Level**: Filters shipments and device data to a specific route.
+- **Segment/Waypoint Level**: Focuses on shipments' ping/battery performance within one segment or waypoint of a route.
+
+**Note**: If you select a particular route in the **Routes** tab, then use the **Segment/Waypoint Selector**, you'll see device metrics for that specific segment or waypoint only.
+
+## Ping Rate Insights
+
+**Ping Rate Insights** visually show whether shipments meet or exceed your expected device "ping rate" (how often the tracking device sends location updates). This helps you quickly identify if any device is underperforming, sending fewer pings than expected or if the ping rate has drifted beyond acceptable thresholds.
+
+![Ping Rate Insights visualization](/n43.png)
+
+### Expected Ping Rate:
+
+- Defined at lane onboarding (e.g., 60 minutes).
+- Displayed as a horizontal **dotted line** on the graph.
+- A 10% tolerance is often applied, meaning any ping rate up to 10% above the baseline could still be considered "Optimal."
+
+### Average Ping Rate
+
+- The overall average across all shipments (given the current **Date Range** and **Product**).
+- Appears as a single numeric value in the left panel (e.g., *70m*).
+- If this average goes up from a prior period and breaches the expected value it's shown in **red** to indicate a potential issue.
+
+### Tolerance Zones
+
+- **Optimal (<1.10×Expected)**: For example, if expected is 60m, then anything ≤66m is "Optimal" (blue dots).
+- **Average (1.10× to 1.25×Expected)**: E.g., >66m but ≤75m (yellow dots).
+- **Poor (>1.25×Expected)**: E.g., >75m (red dots).
+
+### Graph Visualization:
+
+- **X-Axis (Shipment Start Date)**: Each plotted point represents a shipment that started on that date.
+- **Y-Axis (Ping Rate in Minutes)**: The device's average ping rate for the entire shipment (or segment/waypoint if you're in that view).
+
+### Color-Coded Points:
+
+- **Blue**: Optimal
+- **Yellow**: Average
+- **Red**: Poor
+
+### Interacting With the Chart:
+
+- **Filter Button:** Toggle visibility of **Average Ping Rate** and **Expected Ping Rate** lines.
+- **Hover Tooltips:** Hovering a point shows the **Shipment ID**, **Recorded Ping Rate Range** (min and max observed), and the **Average Ping Rate**.
+- **Click to Expand:** An **Expand** icon in the top-right corner enlarges the chart. When expanded, you see a more detailed view, but you cannot click into a specific shipment for deeper info in that mode. There is a possibility for clicking on the review shipment to see the details.
+
+## Battery Insights
+
+**Battery Insights** display the average battery percentage for each shipment at both **start** and **end** of its journey (or segment/waypoint), helping you spot low-battery conditions or suspicious data (e.g., a device ending with a higher battery level than it started).
+
+![Battery Insights visualization](/n44.png)
+
+### Key Fields & Calculations:
+
+- **Avg. Battery % at Start:** The average starting battery percentage for all shipments within your filters.
+- **Avg. Battery % at End:** The average final battery percentage.
+- **Data Corrections:** If the "first ping" is null or 0%, *Contxt* looks at subsequent pings until it finds a valid battery reading to represent the start. Similarly, for the end of a shipment, if the last ping is null, the system tries earlier pings. If a shipment's data is entirely null or zero, it either gets omitted from the averages (null) or included at 0% if that's the actual data.
+
+## Device Ping Rate Performance Map
+
+![Device Ping Rate Performance Map](/n45.png)
+
+The **Device Ping Rate Performance Map** offers a high-level overview of how well tracking devices perform (in terms of ping frequency) along different routes. By default, it shows:
+
+- **Routes** are drawn as dotted lines connecting waypoints.
+- **Clusters of pings** (colored by performance) to indicate where devices either met or missed their expected ping rate.
+
+**Note**: This map visualizes ping rate performance along shipping routes. Use it to quickly spot trouble areas where pings are less frequent than expected—especially helpful if you're monitoring multiple routes at once.
+
+### Color Coding (Ping Rates):
+
+- **Blue**: *Optimal ping rate*: ≤ (Expected Ping Rate × 1.10). Example: If expected is 60 minutes, ≤66 minutes is optimal.
+- **Yellow**: *Average ping rate*: (Expected Ping Rate × 1.10) to (Expected Ping Rate × 1.25). E.g., >66 but ≤75 minutes.
+- **Red**: *Poor ping rate*: > (Expected Ping Rate × 1.25). E.g., >75 minutes.
+
+**Single vs. Multiple Routes**: With one route selected, you'll see that route's line in a distinct color. The legend clarifies the "Optimal/Average/Poor" thresholds. With more than one route, lines appear in different colors, and the legend is route-based.
+
+**No Data**: If no pings match your filters, the map might appear blank or with an indicator: *"No data found."*
+
+![Multiple routes visualization](/n46.png)

@@ -1,0 +1,150 @@
+---
+title: "Routes Tab Interface"
+description: "Detailed guide to the Routes tab within the Lane Risk Assessment interface"
+---
+
+# Routes Tab
+
+When you click on the **Routes** tab within a particular lane (e.g., *Lane: Frankfurt to Louisville*), you'll see a comprehensive interface for analyzing route performance.
+
+![Routes tab header interface](/n52.png)
+
+## Header Elements
+
+The top section of the Routes tab contains several important elements:
+
+- **Lane Name and Breadcrumb:** Shows your current location (*Lane Risk Assessment > Lane: Frankfurt to Louisville*)
+- **Date Range & Product Filters:** Controls which shipments are included in all metrics
+- **Navigation:** The **Back** button returns you to the Lane Risk Assessment page
+- **Download CSV:** Exports route data based on your current filters
+
+## Identified Routes
+
+This section displays all routes identified for the selected lane, including those with zero shipments in the current filter.
+
+![Routes list interface](/n53.png)
+
+![Route performance indicators](/n54.png)
+
+### Route Information
+
+Each route entry includes:
+
+| Element | Description |
+|---------|-------------|
+| **Route Name** | Waypoints joined by hyphens (e.g., *Frankfurt–Port of Rotterdam–Port of Savannah–Louisville*) |
+| **Performance** | Mono-color dots indicating performance level |
+| **External Impact** | High/Medium/Low risk indicator for external events |
+
+### Performance Indicators
+
+Performance is represented by dots:
+- **One Dot** = Needs Attention
+- **Two Dots** = Average
+- **Three Dots** = Optimal
+
+> **Note:** Performance is calculated based on the selected date range. Routes with no shipments in that range may be hidden depending on filter settings.
+
+### External Impact
+
+This near real-time indicator shows possible disruptions:
+- **High** (red)
+- **Medium** (yellow)
+- **Low** (green)
+
+This value does **not** change with date or product filters.
+
+### Default Sorting Logic
+
+Routes are sorted by:
+1. **Route Performance** (Ascending): *Needs Attention* → *Average* → *Optimal*
+2. **External Impact** (Descending): *High* → *Medium* → *Low*
+3. **Route Name** (Alphabetical)
+
+### Pagination Controls
+
+- **Items per Page:** Select 10, 20, 30, 40, or 50 items (default: 10)
+- **Page Navigation:** Standard numbered page controls
+
+## Route Metrics Panel
+
+When you select a route, a metrics panel appears on the right side.
+
+![Route metrics panel](/n55.png)
+
+This panel displays key data for the selected date range and product:
+
+| Metric | Description |
+|--------|-------------|
+| **Shipment Count** | Number of shipments within the filter parameters |
+| **Expected Transit Time** | Contractual/agreed transit duration (e.g., *2d 12h*) |
+| **Avg. Transit Time** | Actual average transit time for filtered shipments |
+| **Delayed Shipment Count** | Shipments that missed the Expected Transit Time |
+| **Shipment Count with Excursions** | Shipments with temperature or quality excursions |
+| **Total CO₂ Emissions** | Carbon emissions for the route (units adapt automatically) |
+
+A **Route Details** button takes you to the full Route Performance screen, maintaining your current filters.
+
+## Athena Insights
+
+![Athena insights panel](/n56.png)
+
+Below the metrics panel, you'll see AI-driven insights labeled **"powered by ATHENA"** specific to the selected route:
+
+- **Delivery Performance:** Highlights, causes, and recommended actions
+- **Temperature Performance:** Excursion patterns and analysis
+- **Device Performance:** Battery and connectivity issues
+- **CO₂ Emissions:** Carbon footprint commentary
+
+## Low Confidence Routes
+
+![Low confidence routes section](/n57.png)
+
+This section appears below the identified routes list when the system has flagged routes with:
+- Insufficient data
+- Less than 2.5% of total shipments for the lane
+
+### Summary Cards
+
+The header includes cards showing totals across all low-confidence routes:
+- **On-time Delivery Performance**
+- **Temperature Performance**
+- **CO₂ Emissions**
+
+> **Admin Feature:** The **Assign Shipments** button allows administrators to reassign shipments or update route definitions.
+
+### Expandable Shipment List
+
+Each low-confidence route can be expanded to show its shipments:
+
+| Element | Description |
+|---------|-------------|
+| **Route Name** | Waypoints joined by hyphens |
+| **Shipment Count** | Number of shipments matching current filters |
+| **Number of Alerts** | Sum of delays and excursions (shown in red if >0) |
+
+When expanded, you'll see:
+
+- **Shipment Table** with columns for:
+  - Shipment ID
+  - Device ID
+  - Start Time
+  - Transit Time
+  - Status (On-Time/Delayed)
+  - Temperature data (Avg/Min/Max)
+  - Number of Excursions
+
+- **Pagination Controls:** 5, 10, 15, or 20 shipments per page (default: 5)
+- **Expand/Collapse All** buttons at the top of the section
+
+![Expanded low confidence route](/n58.png)
+
+## Unresolved Shipments
+
+![Unresolved shipments panel](/n59.png)
+
+At the bottom of the Routes tab, you may see an **Unresolved Shipments** panel indicating:
+- How many shipments are excluded from risk calculations
+- Reasons for exclusion (missing temperature or location data)
+
+A **Review Shipments** button allows users to inspect and correct shipment data as needed.

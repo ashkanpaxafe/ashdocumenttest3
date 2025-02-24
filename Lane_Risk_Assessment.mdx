@@ -1,0 +1,109 @@
+---
+title: "Lane Risk Assessment"
+---
+
+# Lane Risk Assessment
+
+The Lane Risk Assessment page serves as the central hub for monitoring and managing your shipping lanes' performance. This page appears by default when you log into **Contxt**, but you can access it anytime by clicking the Lane Risk Assessment icon in the left navigation menu.
+
+![Lane Risk Assessment Overview](/n11.png)
+
+## Lane List Header
+
+![Lane List Filters](/n12.png)
+
+The header section provides powerful filtering and search capabilities to help you focus on relevant lanes.
+
+### Filters
+
+- **Origin & Destination**
+  - Multi-select filters allowing multiple selections simultaneously
+  - Selecting a destination automatically filters origins to show only those connecting to your chosen destination (and vice versa)
+
+- **Group & Company**
+  - Refine results based on specific business groups or companies
+  - Default selections follow your organization's **Contxt** configuration
+
+- **Product**
+  - Single-select filter that applies to all shipments in the lane
+  - Default shows "Select Product" (no product selected)
+  - Only displays lanes with shipments for the chosen product
+
+### Search Bar
+
+- Search across all displayed table columns and available lane metrics
+- Terms like "air" or "ocean" can be used (note: "multimode" is not searchable)
+- Quickly locate lanes by name or any associated key data
+
+## Lane List
+
+The main table displays all lanes matching your filter and search criteria, with each row providing key details:
+
+| Column | Description |
+|--------|-------------|
+| **Origin** | Starting location for the lane |
+| **Destination** | Ending location for the lane |
+| **Performance** | Visual indicator using dots: <br>• (1 dot) = *Needs Attention* <br>• (2 dots) = *Average* <br>• (3 dots) = *Optimal* |
+| **External Impact** | Impact level of external events: <br>• *High* <br>• *Medium* <br>• *Low* |
+
+### Sorting Logic
+
+Lanes are sorted by default using:
+1. **Primary Sorting** (Ascending): Lane Performance
+   - *Needs Attention* → *Average* → *Optimal*
+2. **Secondary Sorting** (Descending): External Impact
+   - *High* → *Medium* → *Low*
+
+### Pagination
+
+- **Items per Page**: Select 10, 20, 30, 40, or 50 lanes per page (default: 10)
+- **Page Navigation**: Use numbered controls at the bottom to move between pages
+
+## Lane Metrics Panel
+
+When you select a lane, a metrics panel appears on the right side displaying key summary data.
+
+### Condensed View (Default)
+
+- **Transport Mode**: Lists each mode used (e.g., *Air*, *Marine*, *Road*)
+  - Shows "*Multimode*" tag when multiple modes are detected
+- **Routes**: Number of routes (verified and unverified) in this lane
+- **Shipment Count**: Total shipments processed in the most recent data refresh
+- **Delayed Shipment Count**: Number of delayed shipments
+- **Shipment Count with Excursions**: Shipments experiencing temperature excursions or other critical events
+
+### Expanded View
+
+Click **Show More** to access additional metrics:
+
+- **Expected Transit Time**: Agreed-upon lead time for shipments in this lane
+- **Average Transit Time**: 
+  - Actual average transit time (e.g., "2d 15h [+3h]")
+  - Color-coded: red for exceeding contracted time, gray otherwise
+- **Total CO₂ Emissions**:
+  - Automatically adjusts units based on quantity:
+    - <1000 kg → metric tons (e.g., 0.314 metric tons)
+    - ≥1000 kg and <1000 metric tons → metric tons (e.g., 78.731 metric tons)
+    - ≥1000 metric tons → kilotons (e.g., 2.375 kt)
+- **Lane ID**: Displayed if provided by the customer
+
+Click **Show Less** to collapse the expanded view. **Contxt** remembers your preference when you return to the page.
+
+### Lane Details
+
+Click the **Lane Details** button next to the lane name to access a comprehensive view focused on performance trends, device and packaging details, external events, and more.
+
+## Athena Insights
+
+The lower-right corner of the metrics panel features an **"powered by ATHENA"** section providing AI-driven insights about each lane's status, organized into tabs:
+
+| Tab | Focus Area |
+|-----|------------|
+| **Delivery Performance** | On-time delivery metrics, delayed shipments, average delay times, and trends |
+| **Temperature Performance** | Temperature excursions and related impacts |
+| **Route Performance** | Details for each route within the lane |
+| **Device Performance** | Tracking device connectivity and battery life |
+| **Package Performance** | Packaging compliance and improvement recommendations |
+| **External Events** | Significant weather or geopolitical disruptions affecting shipments |
+
+> **Note**: Disabled tabs will appear labeled but not clickable if they're unavailable in your current **Contxt** release.
