@@ -16,6 +16,7 @@
           {
             "group": "Get Started",
             "pages": [
+              "Contxt_Introduction",
               "introduction",
               "quickstart",
               "development"
