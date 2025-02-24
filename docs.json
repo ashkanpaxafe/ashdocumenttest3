@@ -49,6 +49,7 @@
       },
       {
         "tab": "API Reference",
+        "openapi": "https://stoplight.io/api/v1/projects/contxt/live-risk/nodes/live_risk_docs_v2.yaml",
         "groups": [
           {
             "group": "API Documentation",
