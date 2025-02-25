@@ -49,28 +49,7 @@
       },
       {
         "tab": "API Reference",
-        "openapi": "https://stoplight.io/api/v1/projects/contxt/live-risk/nodes/live_risk_docs_v2.yaml",
-        "groups": [
-          {
-            "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete"
-            ]
-          },
-          {
-            "group": "Authorization API",
-            "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/CONTXT-Authorization-5v0v0.yaml",
-            "directory": "api-reference/authorization"
-          }
-        ]
+        "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/CONTXT-Authorization-5v0v0.yaml"
       }
     ],
     "global": {
