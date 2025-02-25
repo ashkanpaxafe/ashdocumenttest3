@@ -64,23 +64,6 @@
               "api-reference/endpoint/create",
               "api-reference/endpoint/delete"
             ]
-          },
-          {
-            "group": "Authorization API",
-            "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/CONTXT-Authorization-5v0v0.yaml",
-            "directory": "api-reference/authorization"
-          }
-        ]
-      },
-      {
-        "tab": "PTE API",
-        "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/PAXAFE-PTE-1v1v0.yaml",
-        "groups": [
-          {
-            "group": "Temperature Prediction",
-            "pages": [
-              "pte-api/introduction"
-            ]
           }
         ]
       }
