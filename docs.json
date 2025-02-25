@@ -64,25 +64,11 @@
               "api-reference/endpoint/create",
               "api-reference/endpoint/delete"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Authorization API",
-        "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/CONTXT-Authorization-5v0v0.yaml",
-        "groups": [
-          {
-            "group": "Authentication",
-            "pages": [
-              "auth-api/introduction"
-            ]
           },
           {
-            "group": "Token Management",
-            "pages": [
-              "auth-api/get-access-token",
-              "auth-api/refresh-token"
-            ]
+            "group": "Authorization API",
+            "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/CONTXT-Authorization-5v0v0.yaml",
+            "directory": "api-reference/authorization"
           }
         ]
       }
