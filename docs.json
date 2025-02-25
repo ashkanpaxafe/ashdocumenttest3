@@ -8,70 +8,81 @@
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    },
-    {
-      "name": "PTA API",
-      "url": "pta-api",
-      "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/PAXAFE-PTA-Device-API-2v1v7.yaml"
-    },
-    {
-      "name": "Lane Risk Assessment",
-      "url": "lane-risk-api",
-      "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/CONTXT-Lane-Risk-Assessment-7v0v1.yaml"
-    }
-  ],
-  "navigation": [
-    {
-      "group": "Get Started",
-      "pages": ["introduction", "quickstart"]
-    },
-    {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
-    },
-    {
-      "group": "API Documentation",
-      "pages": ["api-reference/authentication"]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
-      ]
-    },
-    {
-      "group": "Arrival Prediction",
-      "pages": ["pta/introduction"]
-    },
-    {
-      "group": "Lane Risk Assessment",
-      "pages": ["lane-risk/introduction"]
-    }
-  ],
-  "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
-  },
-  "analytics": {
-    "ga4": {
-      "measurementId": "G-XXXXXXXXXX"
-    }
-  },
-  "feedback": {
-    "thumbsRating": true,
-    "suggestEdit": true,
-    "raiseIssue": true
-  },
-  "modeToggle": {
-    "default": "light"
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": ["introduction", "quickstart"]
+          },
+          {
+            "group": "Essentials",
+            "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "openapi": "https://stoplight.io/api/v1/projects/contxt/live-risk/nodes/live_risk_docs_v2.yaml",
+        "groups": [
+          {
+            "group": "API Documentation",
+            "pages": ["api-reference/authentication"]
+          },
+          {
+            "group": "Endpoint Examples",
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/update",
+              "api-reference/endpoint/delete"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "PTA API",
+        "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/PAXAFE-PTA-Device-API-2v1v7.yaml",
+        "groups": [
+          {
+            "group": "Arrival Prediction",
+            "pages": ["pta/introduction"]
+          }
+        ]
+      },
+      {
+        "tab": "Lane Risk API",
+        "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/CONTXT-Lane-Risk-Assessment-7v0v1.yaml",
+        "groups": [
+          {
+            "group": "Lane Risk Assessment",
+            "pages": ["lane-risk/introduction"]
+          }
+        ]
+      },
+      {
+        "tab": "PTE API",
+        "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/PAXAFE-PTE-1v1v0.yaml",
+        "groups": [
+          {
+            "group": "Temperature Prediction",
+            "pages": ["pte/introduction"]
+          }
+        ]
+      },
+      {
+        "tab": "Authorization API",
+        "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/CONTXT-Authorization-5v0v0.yaml",
+        "groups": [
+          {
+            "group": "Authentication",
+            "pages": ["auth/introduction"]
+          }
+        ]
+      }
+    ]
   },
   "topbarCtaButton": {
     "name": "Get Started",
@@ -103,7 +114,9 @@
   "versions": ["v2.0", "v1.0"],
   "backgroundImage": "/background.png",
   "integrations": {
-    "intercom": "abc123456"
+    "intercom": {
+      "appId": "abc123456"
+    }
   },
   "openapi": "https://example.com/openapi.json",
   "api": {
@@ -120,6 +133,7 @@
     "emptyResult": "No results found."
   },
   "feedback": {
+    "thumbsRating": true,
     "suggestEdit": true,
     "raiseIssue": true
   },
