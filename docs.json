@@ -49,13 +49,32 @@
       },
       {
         "tab": "API Reference",
-        "openapi": "https://stoplight.io/api/v1/projects/contxt/live-risk/nodes/live_risk_docs_v2.yaml",
         "groups": [
           {
             "group": "API Documentation",
             "pages": [
               "api-reference/introduction"
             ]
+          },
+          {
+            "group": "Live Risk API",
+            "openapi": "https://stoplight.io/api/v1/projects/contxt/live-risk/nodes/live_risk_docs_v2.yaml"
+          },
+          {
+            "group": "Authorization API",
+            "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/CONTXT-Authorization-5v0v0.yaml"
+          },
+          {
+            "group": "PTE API",
+            "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/PAXAFE-PTE-1v1v0.yaml"
+          },
+          {
+            "group": "PTA Device API",
+            "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/PAXAFE-PTA-Device-API-2v1v7.yaml"
+          },
+          {
+            "group": "Lane Risk Assessment API",
+            "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/CONTXT-Lane-Risk-Assessment-7v0v1.yaml"
           },
           {
             "group": "Endpoint Examples",
