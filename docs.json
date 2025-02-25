@@ -8,102 +8,120 @@
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "Contxt_Introduction",
-              "introduction",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Contxt Documentation",
-            "pages": [
-              "Device_Performance_Overview",
-              "External_Impact_Map_and_Table",
-              "Glossary",
-              "Lane_Risk_Assessment",
-              "Lane_Route_Shipment_Tab_Heading",
-              "Lane_Route_Shipment_Tab_Heading_External_Impact",
-              "Lane_Route_Shipment_Tab_Heading_Routes"
-            ]
-          },
-          {
-            "group": "Essentials",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "openapi": "https://stoplight.io/api/v1/projects/contxt/live-risk/nodes/live_risk_docs_v2.yaml",
-        "groups": [
-          {
-            "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    },
+    {
+      "name": "PTA API",
+      "url": "pta-api",
+      "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/PAXAFE-PTA-Device-API-2v1v7.yaml"
+    },
+    {
+      "name": "Lane Risk Assessment",
+      "url": "lane-risk-api",
+      "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/CONTXT-Lane-Risk-Assessment-7v0v1.yaml"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": ["introduction", "quickstart"]
+    },
+    {
+      "group": "Essentials",
+      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+    },
+    {
+      "group": "API Documentation",
+      "pages": ["api-reference/authentication"]
+    },
+    {
+      "group": "Endpoint Examples",
+      "pages": [
+        "api-reference/endpoint/get",
+        "api-reference/endpoint/create",
+        "api-reference/endpoint/update",
+        "api-reference/endpoint/delete"
       ]
+    },
+    {
+      "group": "Arrival Prediction",
+      "pages": ["pta/introduction"]
+    },
+    {
+      "group": "Lane Risk Assessment",
+      "pages": ["lane-risk/introduction"]
+    }
+  ],
+  "footerSocials": {
+    "twitter": "https://twitter.com/mintlify",
+    "github": "https://github.com/mintlify",
+    "linkedin": "https://www.linkedin.com/company/mintsearch"
+  },
+  "analytics": {
+    "ga4": {
+      "measurementId": "G-XXXXXXXXXX"
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true,
+    "raiseIssue": true
   },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+  "modeToggle": {
+    "default": "light"
+  },
+  "topbarCtaButton": {
+    "name": "Get Started",
+    "url": "https://dashboard.mintlify.com"
+  },
+  "topbarLinks": [
+    {
+      "name": "Log In",
+      "url": "https://dashboard.mintlify.com/login"
     }
+  ],
+  "anchors": [
+    {
+      "name": "API Reference",
+      "icon": "rectangle-terminal",
+      "url": "api-reference"
+    },
+    {
+      "name": "Changelog",
+      "icon": "list",
+      "url": "https://mintlify.com"
+    },
+    {
+      "name": "Community",
+      "icon": "discord",
+      "url": "https://mintlify.com/community"
+    }
+  ],
+  "versions": ["v2.0", "v1.0"],
+  "backgroundImage": "/background.png",
+  "integrations": {
+    "intercom": "abc123456"
+  },
+  "openapi": "https://example.com/openapi.json",
+  "api": {
+    "baseUrl": "https://api.example.com",
+    "auth": {
+      "method": "key",
+      "name": "Authorization",
+      "inputPrefix": "Bearer "
+    }
+  },
+  "search": {
+    "prompt": "Search documentation...",
+    "placeholder": "Search...",
+    "emptyResult": "No results found."
+  },
+  "feedback": {
+    "suggestEdit": true,
+    "raiseIssue": true
   },
   "footer": {
     "socials": {
