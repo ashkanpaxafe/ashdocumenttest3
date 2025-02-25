@@ -71,6 +71,18 @@
             "directory": "api-reference/authorization"
           }
         ]
+      },
+      {
+        "tab": "PTE API",
+        "openapi": "https://stoplight.io/api/v1/projects/contxt/paxafe-api/nodes/PAXAFE-PTE-1v1v0.yaml",
+        "groups": [
+          {
+            "group": "Temperature Prediction",
+            "pages": [
+              "pte-api/introduction"
+            ]
+          }
+        ]
       }
     ],
     "global": {
